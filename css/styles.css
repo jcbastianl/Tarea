@@ -1,0 +1,4 @@
+/* Aplicamos la fuente Poppins al cuerpo del documento */
+body {
+  font-family: 'Poppins', sans-serif;
+}

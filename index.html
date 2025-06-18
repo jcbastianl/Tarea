@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Sistema - Universidad Nacional de Loja</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="js/main.js" defer></script>
+
+    <style>
+      /* Aplicamos la fuente Poppins al cuerpo del documento */
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // o 'media'
+        theme: {
+          extend: {
+            colors: {
+              'unl-blue': '#003366',
+              'unl-yellow': '#FFD100',
+            }
+          }
+        }
+      }
+    </script>
+
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+
+    <main class="flex items-center justify-center min-h-screen p-4">
+        
+        <div class="relative flex flex-col md:flex-row w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+            
+            <div class="relative hidden lg:flex w-1/2 items-center justify-center bg-unl-blue">
+                <picture>
+                    <source srcset="images/campus.webp" type="image/webp">
+                    <source srcset="images/campus.jpeg" type="image/jpeg">
+                    <img src="images/campus.jpeg" alt="Campus de la Universidad Nacional de Loja" class="absolute h-full w-full object-cover opacity-20">
+                </picture>
+                
+                <div class="z-10 text-center p-8">
+                    <h2 class="text-3xl font-bold text-white leading-tight">
+                        Universidad Nacional de Loja
+                    </h2>
+                    <p class="text-unl-yellow font-medium mt-4 text-lg">
+                        Educamos con excelencia para transformar la sociedad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                
+                <div class="flex justify-center lg:justify-start mb-6">
+                    <picture>
+                        <source srcset="images/logo.webp" type="image/webp">
+                        <source srcset="images/logo.png" type="image/png">
+                        <img src="images/logo.png" alt="Logo UNL" class="w-48">
+                    </picture>
+                </div>
+                
+                <h1 class="text-2xl md:text-3xl font-bold text-unl-blue dark:text-white">Bienvenido de nuevo</h1>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Por favor, inicia sesión para acceder a tu cuenta.</p>
+
+                <form class="flex flex-col gap-6 mt-8">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Correo Institucional</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            placeholder="nombre.apellido@unl.edu.ec"
+                            required
+                            class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-unl-blue dark:focus:ring-unl-yellow transition-shadow"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">Contraseña</label>
+                        <div class="relative">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password"
+                                placeholder="••••••••"
+                                required
+                                class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-unl-blue dark:focus:ring-unl-yellow transition-shadow"
+                            >
+                            <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 flex items-center px-4 text-gray-500 dark:text-gray-400 hover:text-unl-blue dark:hover:text-unl-yellow" aria-label="Mostrar u ocultar contraseña">
+                                <svg id="icon-eye-show" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                                </svg>
+                                <svg id="icon-eye-hide" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd" />
+                                  <path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.742L2.303 6.546A10.048 10.048 0 00.458 10c1.274 4.057 5.022 7 9.542 7 .847 0 1.669-.105 2.454-.303z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button 
+                        type="submit"
+                        class="w-full bg-unl-blue text-white font-bold py-3 px-4 rounded-xl hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-unl-blue dark:focus:ring-offset-gray-800 dark:focus:ring-unl-yellow transition-all duration-300"
+                    >
+                        Acceder
+                    </button>
+                </form>
+
+                <div class="mt-6 flex justify-between items-center text-sm">
+                    <a href="#" class="font-medium text-unl-blue hover:text-unl-yellow dark:text-gray-300 dark:hover:text-unl-yellow transition-colors">¿Olvidaste tu contraseña?</a>
+                    <a href="#" class="font-medium text-unl-blue hover:text-unl-yellow dark:text-gray-300 dark:hover:text-unl-yellow transition-colors">Solicita acceso</a>
+                </div>
+
+                <footer class="mt-12 text-center text-xs text-gray-500 dark:text-gray-400">
+                    <p>© 2025 Universidad Nacional de Loja – Todos los derechos reservados.</p>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
