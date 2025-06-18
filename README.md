@@ -60,7 +60,6 @@ APE-Login/
 - Modifica los estilos en `css/styles.css` o la configuración de Tailwind en `tailwind.config.js` según tus necesidades.
 
 ## Notas
-- Si no se carga correctamente la página, verifica que las rutas relativas de los archivos (CSS, JS, imágenes) sean correctas y que estés abriendo el archivo desde la carpeta raíz del proyecto.
 - Para limpiar la caché del navegador, usa `Ctrl+F5`.
 
 ## Créditos
