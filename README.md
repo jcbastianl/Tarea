@@ -66,4 +66,5 @@ APE-Login/
 - Para limpiar la caché del navegador, usa `Ctrl+F5`.
 
 ## Créditos
-Desarrollado por la Universidad Nacional de Loja.
+Desarrollado por Joseph Balcázar Loaiza.
+
