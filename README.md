@@ -1,10 +1,5 @@
 
 # APE-Login
-![image](https://github.com/user-attachments/assets/5a832a11-96a2-49cc-b20f-9731ffde6c30)
-
-
-![image](https://github.com/user-attachments/assets/1ae3a9f8-bc56-4e4f-9f68-2e1362247f6a)
-
 
 
 Sistema de Login para SportBoard - Universidad Nacional de Loja
