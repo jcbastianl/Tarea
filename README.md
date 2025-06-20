@@ -73,3 +73,14 @@ APE-Login/
 ## Créditos
 Desarrollado por Joseph Balcázar Loaiza.
 
+
+Desarrollado por la Universidad Nacional de Loja.
+
+## Vistas de la Aplicación
+
+A continuación se muestran capturas de pantalla de la interfaz en diferentes dispositivos y vistas:
+
+- ![Vista en computadora](images/imagen1_vistacompu.png)
+- ![Vista en computadora modo oscuro](images/imagen2_vistacompuoscuro.png)
+- ![Vista en celular](images/imagen3_vistacelu.png)
+- ![Vista en celular modo oscuro](images/imagen4_vistaceluoscuro.png)
