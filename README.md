@@ -114,11 +114,11 @@ Se ha añadido un completo panel para la administración de usuarios con las sig
 
 | Dashboard | Lista de Usuarios |
 | :---: | :---: |
-| ![Dashboard](images/interfaz1.png) | ![Lista de Usuarios](images/interfaz2.png) |
+| ![Dashboard](images/interfaz1.png) | ![Lista de Usuarios](images/Interfaz2.png) |
 
 | Creación de Usuario | Perfil de Usuario |
 | :---: | :---: |
-| ![Creación de Usuario](images/interfaz3.png) | ![Perfil de Usuario](images/interfaz4.png) |
+| ![Creación de Usuario](images/Interfaz3.png) | ![Perfil de Usuario](images/Interfaz4.png) |
 
 
 ## Tecnologías Utilizadas
