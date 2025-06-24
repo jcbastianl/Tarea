@@ -1,4 +1,9 @@
 # APE-Login
+![image](https://github.com/user-attachments/assets/5a832a11-96a2-49cc-b20f-9731ffde6c30)
+
+
+![image](https://github.com/user-attachments/assets/1ae3a9f8-bc56-4e4f-9f68-2e1362247f6a)
+
 
 
 Sistema de Login para SportBoard - Universidad Nacional de Loja
@@ -78,57 +83,3 @@ A continuación se muestran capturas de pantalla de la interfaz en diferentes di
 - ![Vista en computadora modo oscuro](images/imagen2_vistacompuoscuro.png)
 - ![Vista en celular](images/imagen3_vistacelu.png)
 - ![Vista en celular modo oscuro](images/imagen4_vistaceluoscuro.png)
-
-
-Este proyecto consiste en una interfaz de inicio de sesión moderna y un completo módulo de gestión de usuarios, diseñados con una estética limpia y profesional utilizando la paleta de colores de la Universidad Nacional de Loja (UNL).
-
-## Características
-
-### 1. Vista de Login
-- Diseño responsive y atractivo.
-- Campos para email y contraseña.
-- Enlace para recuperar contraseña.
-- Botón de inicio de sesión con efecto hover.
-- Integración de logo institucional.
-
-### 2. Módulo de Gestión de Usuarios (Nuevo)
-Se ha añadido un completo panel para la administración de usuarios con las siguientes interfaces:
-
-- **Dashboard Principal:** Métricas clave, gráficos de registros y actividad reciente.
-- **Lista de Usuarios:** Búsqueda, filtros, paginación y acciones rápidas.
-- **Creación y Edición de Usuarios:** Formularios intuitivos y funcionales.
-- **Perfil de Usuario:** Vista detallada con información, actividad y permisos.
-- **Gestión de Permisos:** Matriz de roles y permisos para un control granular.
-- **Búsqueda Avanzada:** Filtros específicos para encontrar usuarios fácilmente.
-- **Dashboard de Actividad:** Visualización de la actividad de los usuarios en la plataforma.
-- **Modales de Confirmación:** Para acciones críticas como la eliminación de usuarios.
-- **Configuración de Notificaciones:** Gestión de las notificaciones que reciben los usuarios.
-
-## Vistas del Módulo de Usuarios
-
-| Dashboard | Lista de Usuarios |
-| :---: | :---: |
-| ![Dashboard](images/interfaz1.png) | ![Lista de Usuarios](images/interfaz2.png) |
-
-| Creación de Usuario | Perfil de Usuario |
-| :---: | :---: |
-| ![Creación de Usuario](images/interfaz3.png) | ![Perfil de Usuario](images/interfaz4.png) |
-
-
-## Tecnologías Utilizadas
-- **HTML5:** Para la estructura semántica.
-- **Tailwind CSS:** Para un diseño rápido y responsive.
-- **JavaScript:** Para la interactividad y la lógica de la interfaz.
-- **Chart.js:** Para la creación de gráficos dinámicos.
-
-## Instalación y Uso
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/APE-Login.git
-   ```
-2. Navega al directorio del proyecto:
-   ```bash
-   cd APE-Login
-   ```
-3. Abre el archivo `index.html` en tu navegador para ver la página de login o navega a la carpeta `user_module` para explorar las nuevas interfaces.
