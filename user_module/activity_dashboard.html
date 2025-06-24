@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Actividad - UNL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --unl-blue: #003366;
+            --unl-yellow: #FFD100;
+        }
+        .bg-unl-blue { background-color: var(--unl-blue); }
+        .text-unl-blue { color: var(--unl-blue); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-unl-blue text-white">
+            <!-- ... sidebar content ... -->
+        </aside>
+
+        <div class="flex-1 p-6">
+            <h1 class="text-2xl font-bold text-unl-blue mb-6">Dashboard de Actividad</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg font-semibold text-unl-blue mb-4">Logins por Día</h2>
+                    <canvas id="loginsChart"></canvas>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg font-semibold text-unl-blue mb-4">Usuarios más Activos</h2>
+                    <ul>
+                        <li>1. Juan Pérez (15 logins)</li>
+                        <li>2. María García (12 logins)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginsCtx = document.getElementById('loginsChart').getContext('2d');
+        new Chart(loginsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+                datasets: [{
+                    label: 'Logins',
+                    data: [12, 19, 3, 5, 2, 3, 7],
+                    borderColor: 'var(--unl-blue)',
+                    tension: 0.1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

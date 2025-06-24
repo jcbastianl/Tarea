@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Usuarios - UNL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --unl-blue: #003366;
+            --unl-yellow: #FFD100;
+        }
+        .bg-unl-blue { background-color: var(--unl-blue); }
+        .bg-unl-yellow { background-color: var(--unl-yellow); }
+        .text-unl-blue { color: var(--unl-blue); }
+        .text-unl-yellow { color: var(--unl-yellow); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-unl-blue text-white flex flex-col">
+            <div class="h-16 flex items-center justify-center text-2xl font-bold">SportBoard</div>
+            <nav class="flex-1 px-2 py-4 space-y-2">
+                <a href="#" class="flex items-center px-4 py-2 text-white bg-gray-700 rounded-md">Dashboard</a>
+                <a href="user_list.html" class="flex items-center px-4 py-2 text-white hover:bg-gray-700 rounded-md">Usuarios</a>
+                <a href="permissions.html" class="flex items-center px-4 py-2 text-white hover:bg-gray-700 rounded-md">Permisos</a>
+                <a href="activity_dashboard.html" class="flex items-center px-4 py-2 text-white hover:bg-gray-700 rounded-md">Actividad</a>
+            </nav>
+        </aside>
+
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="h-16 bg-white shadow-md flex items-center justify-between px-6">
+                <h1 class="text-xl font-semibold text-unl-blue">Dashboard Principal</h1>
+                <div class="flex items-center space-x-4">
+                    <img src="../images/logo.avif" alt="UNL Logo" class="h-8">
+                </div>
+            </header>
+
+            <!-- Main content -->
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h2 class="text-gray-600">Total Usuarios</h2>
+                        <p class="text-3xl font-bold text-unl-blue">1,250</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h2 class="text-gray-600">Usuarios Activos</h2>
+                        <p class="text-3xl font-bold text-green-500">980</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h2 class="text-gray-600">Nuevos Registros (Mes)</h2>
+                        <p class="text-3xl font-bold text-unl-yellow">75</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        <h2 class="text-gray-600">Usuarios Bloqueados</h2>
+                        <p class="text-3xl font-bold text-red-500">15</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-lg font-semibold text-unl-blue mb-4">Registros por Mes</h2>
+                        <canvas id="registrationsChart"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-lg font-semibold text-unl-blue mb-4">Usuarios en Línea</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center"><span class="h-3 w-3 bg-green-500 rounded-full mr-3"></span> Juan Pérez</div>
+                            <div class="flex items-center"><span class="h-3 w-3 bg-green-500 rounded-full mr-3"></span> María García</div>
+                            <div class="flex items-center"><span class="h-3 w-3 bg-green-500 rounded-full mr-3"></span> Carlos Sánchez</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg font-semibold text-unl-blue mb-4">Últimos Usuarios Registrados</h2>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="py-2">Nombre</th>
+                                <th class="py-2">Email</th>
+                                <th class="py-2">Fecha de Registro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="py-2">Ana Torres</td><td class="py-2">ana.t@example.com</td><td class="py-2">2025-06-23</td></tr>
+                            <tr><td class="py-2">Luis Castro</td><td class="py-2">luis.c@example.com</td><td class="py-2">2025-06-22</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+
+            <!-- Floating Action Button -->
+            <button class="absolute bottom-10 right-10 bg-unl-yellow text-unl-blue w-16 h-16 rounded-full shadow-lg flex items-center justify-center text-3xl">
+                +
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('registrationsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Nuevos Usuarios',
+                    data: [65, 59, 80, 81, 56, 75],
+                    backgroundColor: 'rgba(0, 51, 102, 0.8)',
+                    borderColor: 'rgba(0, 51, 102, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+</body>
+</html>

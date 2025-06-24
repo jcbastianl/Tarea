@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Notificaciones - UNL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --unl-blue: #003366;
+            --unl-yellow: #FFD100;
+        }
+        .bg-unl-yellow { background-color: var(--unl-yellow); }
+        .text-unl-blue { color: var(--unl-blue); }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: var(--unl-blue);
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-6">
+        <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold text-unl-blue mb-6">Configuración de Notificaciones</h1>
+            <div class="space-y-8">
+                <!-- Sección de Notificaciones -->
+                <div>
+                    <h2 class="text-lg font-semibold text-unl-blue border-b pb-2 mb-4">Actividad de la Cuenta</h2>
+                    <div class="flex justify-between items-center">
+                        <span>Nuevo login detectado</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Sección de Notificaciones -->
+                <div>
+                    <h2 class="text-lg font-semibold text-unl-blue border-b pb-2 mb-4">Novedades</h2>
+                    <div class="flex justify-between items-center">
+                        <span>Anuncios de productos</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button class="px-6 py-2 bg-unl-yellow text-unl-blue font-bold rounded-md">Guardar Configuración</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
