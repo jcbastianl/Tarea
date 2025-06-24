@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Avanzada - UNL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --unl-blue: #003366;
+            --unl-yellow: #FFD100;
+        }
+        .bg-unl-blue { background-color: var(--unl-blue); }
+        .bg-unl-yellow { background-color: var(--unl-yellow); }
+        .text-unl-blue { color: var(--unl-blue); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar Filtros -->
+        <aside class="w-1/3 bg-white p-6 border-r">
+            <h2 class="text-xl font-bold text-unl-blue mb-6">Filtros de Búsqueda</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="text-sm font-medium">Nombre o Email</label>
+                    <input type="text" class="mt-1 w-full p-2 border rounded-md">
+                </div>
+                <div>
+                    <label class="text-sm font-medium">Rol</label>
+                    <select class="mt-1 w-full p-2 border rounded-md">
+                        <option>Todos</option>
+                        <option>Admin</option>
+                        <option>Editor</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-sm font-medium">Fecha de Registro</label>
+                    <input type="date" class="mt-1 w-full p-2 border rounded-md">
+                </div>
+                <div class="flex justify-between">
+                    <button type="submit" class="px-4 py-2 bg-unl-blue text-white rounded-md">Buscar</button>
+                    <button type="reset" class="px-4 py-2 bg-gray-200 rounded-md">Limpiar</button>
+                </div>
+            </form>
+        </aside>
+
+        <!-- Resultados -->
+        <main class="w-2/3 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-unl-blue">Resultados (3)</h1>
+                <button class="px-4 py-2 bg-unl-yellow text-unl-blue font-semibold rounded-md">Exportar CSV</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md space-y-4">
+                <!-- User card -->
+                <div class="flex items-center p-4 border rounded-md">
+                    <img src="https://i.pravatar.cc/40?u=1" class="h-10 w-10 rounded-full mr-4">
+                    <div>
+                        <p class="font-semibold">Juan Pérez</p>
+                        <p class="text-sm text-gray-600">juan.perez@example.com</p>
+                    </div>
+                    <span class="ml-auto px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded-full">Activo</span>
+                </div>
+                 <!-- User card -->
+                <div class="flex items-center p-4 border rounded-md">
+                    <img src="https://i.pravatar.cc/40?u=4" class="h-10 w-10 rounded-full mr-4">
+                    <div>
+                        <p class="font-semibold">Juana de Arco</p>
+                        <p class="text-sm text-gray-600">juana.da@example.com</p>
+                    </div>
+                    <span class="ml-auto px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded-full">Activo</span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

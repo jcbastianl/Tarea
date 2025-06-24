@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Permisos - UNL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --unl-blue: #003366;
+            --unl-yellow: #FFD100;
+        }
+        .bg-unl-blue { background-color: var(--unl-blue); }
+        .bg-unl-yellow { background-color: var(--unl-yellow); }
+        .text-unl-blue { color: var(--unl-blue); }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar Roles -->
+        <aside class="w-1/4 bg-white border-r p-6">
+            <h2 class="text-xl font-bold text-unl-blue mb-4">Roles</h2>
+            <ul>
+                <li class="p-2 rounded-md bg-unl-yellow cursor-pointer">Administrador</li>
+                <li class="p-2 rounded-md hover:bg-gray-200 cursor-pointer">Editor</li>
+                <li class="p-2 rounded-md hover:bg-gray-200 cursor-pointer">Miembro</li>
+            </ul>
+        </aside>
+
+        <!-- Matriz de Permisos -->
+        <main class="w-3/4 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-unl-blue">Permisos para Administrador</h1>
+                <button class="px-6 py-2 bg-unl-yellow text-unl-blue font-bold rounded-md">Guardar Permisos</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-unl-blue border-b pb-2 mb-4">Módulo de Usuarios</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue" checked> <span class="ml-2">Ver usuarios</span></label>
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue" checked> <span class="ml-2">Crear usuarios</span></label>
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue" checked> <span class="ml-2">Editar usuarios</span></label>
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue" checked> <span class="ml-2">Eliminar usuarios</span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-unl-blue border-b pb-2 mb-4">Módulo de Contenido</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue" checked> <span class="ml-2">Ver contenido</span></label>
+                            <label class="flex items-center"><input type="checkbox" class="form-checkbox h-5 w-5 text-unl-blue"> <span class="ml-2">Publicar contenido</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
