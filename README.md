@@ -1,10 +1,4 @@
 # APE-Login
-![image](https://github.com/user-attachments/assets/5a832a11-96a2-49cc-b20f-9731ffde6c30)
-
-
-![image](https://github.com/user-attachments/assets/1ae3a9f8-bc56-4e4f-9f68-2e1362247f6a)
-
-
 
 Sistema de Login para SportBoard - Universidad Nacional de Loja
 
@@ -83,7 +77,15 @@ A continuación se muestran capturas de pantalla de la interfaz en diferentes di
 - ![Vista en computadora modo oscuro](images/imagen2_vistacompuoscuro.png)
 - ![Vista en celular](images/imagen3_vistacelu.png)
 - ![Vista en celular modo oscuro](images/imagen4_vistaceluoscuro.png)
+## Vistas del Módulo de Usuarios
 
+| Dashboard | Lista de Usuarios |
+| :---: | :---: |
+| ![Dashboard](images/interfaz1.png) | ![Lista de Usuarios](images/Interfaz2.png) |
+
+| Creación de Usuario | Perfil de Usuario |
+| :---: | :---: |
+| ![Creación de Usuario](images/Interfaz3.png) | ![Perfil de Usuario](images/Interfaz4.png) |
 # APE-Login - Módulo de Autenticación y Gestión de Usuarios
 
 Este proyecto consiste en una interfaz de inicio de sesión moderna y un completo módulo de gestión de usuarios, diseñados con una estética limpia y profesional utilizando la paleta de colores de la Universidad Nacional de Loja (UNL).
@@ -110,15 +112,6 @@ Se ha añadido un completo panel para la administración de usuarios con las sig
 - **Modales de Confirmación:** Para acciones críticas como la eliminación de usuarios.
 - **Configuración de Notificaciones:** Gestión de las notificaciones que reciben los usuarios.
 
-## Vistas del Módulo de Usuarios
-
-| Dashboard | Lista de Usuarios |
-| :---: | :---: |
-| ![Dashboard](images/interfaz1.png) | ![Lista de Usuarios](images/Interfaz2.png) |
-
-| Creación de Usuario | Perfil de Usuario |
-| :---: | :---: |
-| ![Creación de Usuario](images/Interfaz3.png) | ![Perfil de Usuario](images/Interfaz4.png) |
 
 
 ## Tecnologías Utilizadas
