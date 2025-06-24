@@ -79,7 +79,14 @@ Desarrollado por la Universidad Nacional de Loja.
 
 A continuación se muestran capturas de pantalla de la interfaz en diferentes dispositivos y vistas:
 
-- ![Vista en computadora](images/imagen1_vistacompu.png)
-- ![Vista en computadora modo oscuro](images/imagen2_vistacompuoscuro.png)
-- ![Vista en celular](images/imagen3_vistacelu.png)
-- ![Vista en celular modo oscuro](images/imagen4_vistaceluoscuro.png)
+### Vista en Computadora
+![Vista en computadora](images/imagen1_vistacompu.png)
+
+### Vista en Computadora - Modo Oscuro
+![Vista en computadora modo oscuro](images/imagen2_vistacompuoscuro.png)
+
+### Vista en Celular
+![Vista en celular](images/imagen3_vistacelu.png)
+
+### Vista en Celular - Modo Oscuro
+![Vista en celular modo oscuro](images/imagen4_vistaceluoscuro.png)
