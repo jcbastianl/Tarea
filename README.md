@@ -1,9 +1,4 @@
-# APE-Login
-![image](https://github.com/user-attachments/assets/5a832a11-96a2-49cc-b20f-9731ffde6c30)
-
-
-![image](https://github.com/user-attachments/assets/1ae3a9f8-bc56-4e4f-9f68-2e1362247f6a)
-
+# Tarea
 
 
 Sistema de Login para SportBoard - Universidad Nacional de Loja
@@ -171,12 +166,10 @@ Se ha añadido un completo panel para la administración de usuarios con las sig
 ### Logo UNL
 El proyecto incluye el logo de la Universidad Nacional de Loja en múltiples formatos:
 - ![Logo AVIF](images/logo.avif)
-- ![Logo JPEG](images/logo.jpeg)  
-- ![Logo WEBP](images/logo.webp)
+
 
 ### Imagen del Campus
 Se incluyen imágenes del campus universitario:
 - ![Campus AVIF](images/campus.avif)
-- ![Campus JPEG](images/campus.jpeg)
-- ![Campus WEBP](images/campus.webp)
+
 
